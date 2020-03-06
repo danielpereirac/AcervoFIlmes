@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+
+    <script src="@Url.Content("~/Scripts/modernizr-*")"></script>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <script src="@Url.Content("~/Scripts/popper.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-3.0.0.min.js")"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            @Html.ActionLink("Acervo de Filmes", "Index", "Home", new { area = "" }, new
+            {
+                @class = "navbar-brand"
+            })
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="textoNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Movie/Create">Novo Filme</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Movie">Filmes</a>
+                </li>
+            </ul>
+        
+        </div>
+    </nav>
+   
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="text-center">
+
+                <p>Daniel Pereira: Software Engineer</p>
+            </div>
+        </footer>
+    </div>
+    <script src="@Url.Content("~/Scripts/jquery-3.0.0.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+
+</body>
+</html>

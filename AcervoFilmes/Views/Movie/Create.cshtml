@@ -1,0 +1,75 @@
+﻿@model AcervoFilmes.Models.MovieViewModel
+<h1>@ViewBag.Title</h1>
+<hr />
+@using (Html.BeginForm("Create", "Movie", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.MovieId)
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Title, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Title,
+                     new { @class = "form-control", @placeholder = "Titulo" })
+                @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Sinopse, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(m => m.Sinopse,
+                     new { @class = "form-control", @placeholder = "Sinopse" })
+                @Html.ValidationMessageFor(m => m.Sinopse, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Duration, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Duration,
+                     new { @class = "form-control", @placeholder = "Duraçao" })
+                @Html.ValidationMessageFor(m => m.Duration, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Year, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Year,
+                     new { @class = "form-control", @placeholder = "Ano lancamento" })
+                @Html.ValidationMessageFor(m => m.Year, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Direction, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Direction,
+                     new { @class = "form-control", @placeholder = "Direcao" })
+                @Html.ValidationMessageFor(m => m.Direction, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.TypeMidia, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.TypeMidia,
+                     new { @class = "form-control", @placeholder = "Tipo de midia" })
+                @Html.ValidationMessageFor(m => m.TypeMidia, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Elenco, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(m => m.Elenco,
+                     new { @class = "form-control", @placeholder = "Elenco" })
+                @Html.ValidationMessageFor(m => m.Elenco, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar" class="btn btn-success" />
+                @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-danger" })
+            </div>
+        </div>
+    </div>
+}
+<div>
+</div>
+<script src="@Url.Content(" ~ /Scripts/jqueryval")"></script>

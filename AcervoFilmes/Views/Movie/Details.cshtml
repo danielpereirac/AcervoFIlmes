@@ -1,0 +1,48 @@
+﻿@model AcervoFilmes.Models.Movie
+@{
+    ViewBag.Title = "Detalhes";
+}
+<h2>Detalhes</h2>
+<div class="form-horizontal">
+    <div class="form-group">
+        @Html.LabelFor(m => m.title, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.title,
+                                           new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.sinopse, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.sinopse,
+                                           new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.duration, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.duration,
+                               new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.direction, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.direction,
+                               new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.elenco, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.elenco,
+                               new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+   
+
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-success" })
+            </div>
+      
+</div>

@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcervoFilmes", "AcervoFilmes\AcervoFilmes.csproj", "{20A8567B-58A7-4B80-9B7B-813ED4F7B1A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcervoFilmes.Tests", "AcervoFilmes.Tests\AcervoFilmes.Tests.csproj", "{19B4B92D-0DE3-4488-9CB6-6BAF19B01DB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20A8567B-58A7-4B80-9B7B-813ED4F7B1A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20A8567B-58A7-4B80-9B7B-813ED4F7B1A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20A8567B-58A7-4B80-9B7B-813ED4F7B1A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20A8567B-58A7-4B80-9B7B-813ED4F7B1A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B4B92D-0DE3-4488-9CB6-6BAF19B01DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B4B92D-0DE3-4488-9CB6-6BAF19B01DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B4B92D-0DE3-4488-9CB6-6BAF19B01DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B4B92D-0DE3-4488-9CB6-6BAF19B01DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
